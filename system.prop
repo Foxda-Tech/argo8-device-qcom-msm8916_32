@@ -145,3 +145,6 @@ ro.min_freq=800000
 
 #PPPOE config enable
 ro.config.pppoe_enable=1
+
+#HWUI properties
+ro.hwui.text_large_cache_height=2048
