@@ -147,3 +147,6 @@ ro.config.pppoe_enable=1
 
 #HWUI properties
 ro.hwui.text_large_cache_height=2048
+
+#property to enable narrow search range for video encoding
+vidc.enc.narrow.searchrange=1
