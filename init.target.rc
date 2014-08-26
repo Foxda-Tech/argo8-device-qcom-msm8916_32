@@ -71,6 +71,10 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
 on init
    write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
+#enable zram
+on property:ro.config.zram=true
+    swapon_all fstab.qcom
+
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
     write /sys/class/power_supply/battery/charging_enabled 0
@@ -98,9 +102,9 @@ service qseecomd /system/bin/qseecomd
    user root
    group root
 
-#service mpdecision /system/bin/mpdecision --avg_comp
-#   user root
-#   disabled
+service mpdecision /system/bin/mpdecision --avg_comp
+   user root
+   disabled
 
 service perfd /system/bin/perfd
    user root
