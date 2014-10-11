@@ -150,3 +150,6 @@ ro.hwui.text_large_cache_height=2048
 
 #property to enable narrow search range for video encoding
 vidc.enc.narrow.searchrange=1
+
+ro.sf.lcd_density=180
+qemu.hw.mainkeys=0
